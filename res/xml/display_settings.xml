@@ -203,6 +203,14 @@
             android:defaultValue="false"
             settings:controller="com.android.settings.custom.touch.HighTouchSensitivitySettingsPreferenceController" />
 
+        <!-- Double tap to sleep -->
+        <com.android.settings.custom.preference.SystemSettingSwitchPreference
+            android:key="double_tap_sleep_gesture"
+            android:title="@string/status_bar_double_tap_to_sleep_title"
+            android:summary="@string/status_bar_double_tap_to_sleep_summary"
+            android:defaultValue="@*android:bool/config_dt2sGestureEnabledByDefault"
+            settings:requiresConfig="@*android:bool/config_dt2sGestureAvailable" />
+
         <ListPreference
             android:key="theme"
             android:title="@string/device_theme"
